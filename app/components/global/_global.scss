@@ -1,0 +1,176 @@
+body {
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  background: $lightGrey;
+  min-height: 150vh;
+  padding-bottom: 130px;
+  position: relative;
+  color: #444;
+}
+
+body, input, textarea {
+  font-family: 'Lato', sans-serif;
+//  font-family: 'Oswald', sans-serif;
+//  font-family: 'Dosis', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+i.fa {
+  line-height: inherit;
+}
+
+h1, h2, h3, p {
+  padding: 0;
+  margin: 0 0 15px;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+//  color: #888;
+}
+
+a, a:hover, a:active, a:focus {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: $primary;
+
+  &:hover {
+    color: $secondary;
+  }
+}
+
+.vass-btn {
+  line-height: 25px;
+  padding: 0 15px;
+  color: $primary;
+  border: 1px solid $primary;
+  border-radius: 3px;
+  font-weight: 500;
+  display: inline-block;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background: $primary;
+    color: white;
+  }
+
+  &.alt {
+    color: $secondary;
+    border: 1px solid $secondary;
+
+    &:hover {
+      background: $secondary;
+      color: white;
+    }
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.banner {
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+//  margin: 0 2px;
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .banner-text {
+    color: white;
+    font-weight: 400;
+    bottom: 30px;
+    max-width: 600px;
+    position: absolute;
+    z-index: 1;
+    padding: 0 30px;
+  }
+}
+
+.promo {
+//  padding: 0 2px;
+  margin-top: 50px;
+  color: inherit;
+  display: block;
+  display: none;
+
+  .promo-image-container {
+    height: 175px;
+    overflow: hidden;
+    .promo-image {
+      height: 175px;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      transition:all 0.3s ease-out;
+
+    }
+  }
+
+
+  .promo-content {
+    background: white;
+    padding: 15px;
+//    border-bottom: 3px solid $primary;
+    border-top: 3px solid $primary;
+    height: 175px;
+    transition: all 0.3s linear;
+
+    p {
+      height: 55px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+
+    &.alt {
+//      border-bottom: 3px solid $secondary;
+      border-top: 3px solid $secondary;
+      background: #f8f8f8;
+    }
+  }
+
+  &:hover {
+
+    .promo-image {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.promo-large {
+  @extend .promo;
+
+  .promo-image, .promo-content, .promo-image-container {
+    height: 300px !important;
+
+    p {
+      display: block;
+      height:auto;
+    }
+  }
+
+}

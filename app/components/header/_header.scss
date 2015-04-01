@@ -1,0 +1,79 @@
+#header {
+  background: $glass;
+  background: white;
+  //  background:transparentize($primary, 0.1);
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  display: none;
+
+  .logo {
+    position: absolute;
+
+    img {
+      height: 30px;
+      margin: 20px 0;
+    }
+  }
+
+  .icons {
+    height: 50px;
+    margin: 10px 0;
+    line-height: 50px;
+    position: absolute;
+    right: 0;
+    font-size: 25px;
+    color: white;
+    color: $primary;
+
+    i {
+      width: 50px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+  .social {
+    position: absolute;
+    line-height: 50px;
+    right: 50%;
+    margin-right: -30px;
+    top: 10px;
+
+    i {
+      width: 30px;
+      font-size: 20px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .fa-twitter {
+      &:hover {
+        color: deepskyblue;
+
+      }
+    }
+
+    .fa-linkedin {
+      &:hover {
+        color: #007bb6;
+      }
+    }
+  }
+}
+
+#header-transparent {
+  @extend #header;
+  display: block;
+
+  background: none;
+  color: white;
+  box-shadow: none;
+  .icons {
+    color: white;
+  }
+}

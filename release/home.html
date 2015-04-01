@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>VASSIT</title>
+
+    <link rel="stylesheet" href="bower.css"/>
+    <link rel="stylesheet" href="app.css"/>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,300,400,700,100italic,300italic,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Dosis:100,300,400,700,100italic,300italic,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body ng-app="vassit-web">
+<div ng-controller="HeaderController">
+    <header id="header-transparent">
+        <div class="container">
+            <div class="logo">
+                <img src="img/vassit-logo-white.png" alt="VASSIT Logo"/>
+            </div>
+
+            <div class="social">
+                <i class="fa fa-fw fa-linkedin"></i>
+                <i class="fa fa-fw fa-twitter"></i>
+
+            </div>
+            <div class="icons">
+                <i class="fa fa-fw fa-bars show-menu"></i>
+            </div>
+        </div>
+    </header>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/vassit-logo.png" alt="VASSIT Logo"/>
+            </div>
+
+            <div class="social">
+                <i class="fa fa-fw fa-linkedin"></i>
+                <i class="fa fa-fw fa-twitter"></i>
+
+            </div>
+            <div class="icons">
+                <i class="fa fa-fw fa-bars show-menu"></i>
+            </div>
+        </div>
+    </header>
+
+</div>
+<div data-screen="menu" ng-controller="MenuController">
+    <nav id="menu">
+        <div class="container">
+
+            <div class="logo">
+                <img src="img/vassit-logo-white.png" alt="VASSIT Logo"/>
+            </div>
+            <div class="icons">
+                <i class="fa fa-fw fa-times hide-menu"></i>
+            </div>
+
+            <!--<h1 style="">Menu</h1>-->
+            <!--<hr/>-->
+            <div class="col-sm-4 col-xs-6">
+                <div class="row">
+                    <ul class="primary">
+                        <li data-has-sub="vass-group"><a href="#">VASS Group <i class="fa fa-chevron-right pull-right"></i></a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li data-has-sub="solutions"><a href="#">Solutions <i class="fa fa-chevron-right pull-right"></i></a></li>
+                        <li><a href="#">Knowledge Base</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Get In Touch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-6">
+                <div class="row">
+                    <ul data-sub="vass-group">
+                        <li><a href="#">GRUPO VASS</a></li>
+                        <li><a href="#">VASSIT US</a></li>
+                        <li><a href="#">VASS Colombia</a></li>
+                        <li><a href="#">VASS Brasil</a></li>
+                        <li><a href="#">VASS Mexico</a></li>
+                    </ul>
+
+                    <ul data-sub="solutions">
+                        <li><a href="#">Social E-Commerce</a></li>
+                        <li><a href="#">Invenio</a></li>
+                        <li><a href="#">Smartex</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-sm-4 hidden-xs">
+                VASSIT brings people, capital and ideas together to help our clients and the communities we serve. Learn more about our firm.
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div data-screen="home">
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <div class="banner"
+                 style="background-image: url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/282PFH48UW.jpg')">
+                <div class="container" style="height: 100%">
+                    <div class="banner-text">
+                        <h1>The Value of Making Things Simple</h1>
+
+                        <p>
+                            Get an overview of our company. Meet our leaders. Learn about our people, culture and our commitment to
+                            diversity. Learn about our Business Standards.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="overlay">
+
+                </div>
+
+            </div>
+
+        <!--</div>-->
+
+    <!--</div>-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="promo">
+                        <div class="promo-image-container">
+                            <div class="promo-image"
+                                 style="background-image: url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/84GOP2OAKR.jpg')"></div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>What We Do</h3>
+
+                            <p>
+                                Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por
+                                scientie, musica, sport etc, litot Europa usa li sam vocabular.
+                            </p>
+
+                            <a class="vass-btn" href="#"><strong>More &nbsp; <i class="fa fa-angle-right"></i></strong></a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="promo">
+                        <div class="promo-image-container">
+                            <div class="promo-image"
+                                 style="background-image: url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/E7CC86AEBC.jpg')"></div>
+                        </div>
+                        <div class="promo-content alt">
+                            <h3>Our People</h3>
+
+                            <p>
+                                Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules.
+                                Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
+                                custosi traductores.
+                            </p>
+                            <a class="vass-btn alt" href="#"><strong>More &nbsp; <i
+                                    class="fa fa-angle-right"></i></strong></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="promo">
+
+                        <div class="promo-image-container">
+                            <div class="promo-image"
+                                 style="background-image: url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/D343C9600B.jpg')"></div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Technology</h3>
+
+                            <p>
+                                At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.
+                                Ma quande lingues coalesce
+                            </p>
+                            <a class="vass-btn" href="#"><strong>More &nbsp; <i class="fa fa-angle-right"></i></strong></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="promo-large">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="row">
+
+                        <div class="promo-image-container">
+                            <div class="promo-image"
+                                 style="background-image: url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/BB18F3365D.jpg')"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-sm-5">
+                    <div class="row">
+
+                        <div class="promo-content alt">
+                            <h3>Our Clients</h3>
+
+                            <p>
+                                Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules.
+                                Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
+                                custosi traductores.
+                            </p>
+
+                            <p>
+                                At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.
+                                Ma quande lingues coalesce
+                            </p>
+                            <a class="vass-btn alt" href="#"><strong>More &nbsp; <i
+                                    class="fa fa-angle-right"></i></strong></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="promo">
+                        <div class="promo-image-container">
+                            <div class="promo-image"
+                                 style="background-image: url('https://unsplash.it/500/300/?random&2')"></div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Careers</h3>
+
+                            <p>
+                                Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por
+                                scientie, musica, sport etc, litot Europa usa li sam vocabular.
+                            </p>
+
+                            <a class="vass-btn" href="#"><strong>More &nbsp; <i class="fa fa-angle-right"></i></strong></a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="promo">
+                        <div class="promo-image-container">
+                            <div class="promo-image"
+                                 style="background-image: url('https://unsplash.it/500/300/?random&3')"></div>
+                        </div>
+                        <div class="promo-content alt">
+                            <h3>Values</h3>
+
+                            <p>
+                                Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules.
+                                Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
+                                custosi traductores.
+                            </p>
+                            <a class="vass-btn alt" href="#"><strong>More &nbsp; <i
+                                    class="fa fa-angle-right"></i></strong></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="promo">
+
+                        <div class="promo-image-container">
+                            <div class="promo-image"
+                                 style="background-image: url('https://unsplash.it/500/300/?random&5')"></div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Other Content</h3>
+
+                            <p>
+                                At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.
+                                Ma quande lingues coalesce
+                            </p>
+                            <a class="vass-btn" href="#"><strong>More &nbsp; <i class="fa fa-angle-right"></i></strong></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer id="footer">
+    <div class="container">
+
+        <div class="pull-right">
+            <a href="/privacy-policy">Privacy Policy</a>
+            &nbsp;
+            <a href="/terms-of-use">Terms of Use</a>
+        </div>
+
+        <div class="pull-left">
+            © 2015 VASSIT UK Ltd. All rights reserved.
+        </div>
+
+        <a href="https://www.twitter.com/andigital"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/andigital"><i class="fa fa-linkedin"></i></a>
+    </div>
+</footer>
+
+<script src="bower.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
