@@ -29,6 +29,7 @@ app.controller('HeaderController', ['$scope', function ($scope) {
         }
     }
 }]);
+
 var app = angular.module('vassit-web');
 
 app.controller('MenuController', ['$scope', function ($scope) {
@@ -122,7 +123,6 @@ app.controller('MenuController', ['$scope', function ($scope) {
     $scope.hideMenu = hideMenu;
     $scope.showSub = showSub;
 }]);
-
 var app = angular.module('vassit-web');
 
 app.controller('ShowcaseController', ['$scope', function ($scope) {

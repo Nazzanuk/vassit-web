@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>VASSIT</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="bower.css"/>
+    <link rel="stylesheet" href="app.css"/>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,300,400,700,100italic,300italic,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Dosis:100,300,400,700,100italic,300italic,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body ng-app="vassit-web">
+<div ng-controller="HeaderController">
+    <!--<header id="header-transparent">-->
+        <!--<div class="container">-->
+            <!--<div class="logo">-->
+                <!--<img src="img/vassit-logo-white.png" alt="VASSIT Logo"/>-->
+            <!--</div>-->
+
+            <!--<div class="social">-->
+                <!--<i class="fa fa-fw fa-linkedin"></i>-->
+                <!--<i class="fa fa-fw fa-twitter"></i>-->
+
+            <!--</div>-->
+            <!--<div class="icons">-->
+                <!--<i class="fa fa-fw fa-bars show-menu"></i>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</header>-->
+    <!--<header id="header">-->
+        <!--<div class="container">-->
+            <!--<div class="logo">-->
+                <!--<img src="img/vassit-logo.png" alt="VASSIT Logo"/>-->
+            <!--</div>-->
+
+            <!--<div class="social">-->
+                <!--<i class="fa fa-fw fa-linkedin"></i>-->
+                <!--<i class="fa fa-fw fa-twitter"></i>-->
+
+            <!--</div>-->
+            <!--<div class="icons">-->
+                <!--<i class="fa fa-fw fa-bars show-menu"></i>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</header>-->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/vassit-logo.png" alt="VASSIT Logo"/>
+            </div>
+
+            <div class="top-level">
+                <ul>
+                    <li data-has-menu="services"><a>Services</a></li>
+                    <li data-has-menu="solutions"><a>Solutions</a></li>
+                    <li><a href="#">Clients</a></li>
+                    <li data-has-menu="about-us"><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+</div>
+<div data-screen="menu" ng-controller="MenuController">
+    <div class="menu-background hide-menu">
+
+    </div>
+    <nav id="menu">
+        <div class="container">
+
+            <!--<div class="logo">-->
+            <!--<img src="img/vassit-logo.png" alt="VASSIT Logo"/>-->
+            <!--</div>-->
+            <!--<div class="icons">-->
+            <!--<i class="fa fa-fw fa-times hide-menu"></i>-->
+            <!--</div>-->
+
+            <!--<h1 style="">Menu</h1>-->
+            <!--<hr/>-->
+            <!--<div class="col-sm-4 col-xs-6">-->
+            <!--<div class="row">-->
+            <!--<ul class="primary">-->
+            <!--<li data-has-sub="services"><a href="#">Services <i class="fa fa-chevron-right pull-right"></i></a></li>-->
+            <!--<li data-has-sub="solutions"><a href="#">Solutions <i class="fa fa-chevron-right pull-right"></i></a></li>-->
+            <!--<li><a href="#">Clients</a></li>-->
+            <!--<li><a href="#">About Us</a></li>-->
+            <!--<li><a href="#">Blog</a></li>-->
+            <!--<li><a href="#">Get In Touch</a></li>-->
+            <!--</ul>-->
+            <!--</div>-->
+            <!--</div>-->
+            <div class="row">
+
+                <div class="col-sm-4 col-xs-6">
+                    <div class="row">
+                        <ul data-menu="services">
+                            <li><a href="/services.html">All Services</a></li>
+                            <li><a href="#">Application development</a></li>
+                            <li><a href="#">Digital</a></li>
+                            <li><a href="#">Consulting</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+
+                        <ul data-menu="solutions">
+                            <li data-has-sub="customer-experience"><a href="#">Customer Experience <i
+                                    class="fa fa-angle-right pull-right"></i></a></li>
+                            <li data-has-sub="big-data"><a href="#">Big Data <i
+                                    class="fa fa-angle-right pull-right"></i></a></li>
+                            <li data-has-sub="industry-solutions"><a href="#">Industry Solutions <i
+                                    class="fa fa-angle-right pull-right"></i></a></li>
+                        </ul>
+
+                        <ul data-menu="about-us">
+                            <li><a href="#">Partnership</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">People</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="row">
+                        <ul data-sub="customer-experience">
+                            <li><a href="#">People Finder</a></li>
+                            <li><a href="#">ECM</a></li>
+                            <li><a href="#">Automated Marketing</a></li>
+                        </ul>
+                        <ul data-sub="big-data">
+                            <li><a href="#">Smartex</a></li>
+                            <li><a href="#">IoT</a></li>
+                        </ul>
+                        <ul data-sub="industry-solutions">
+                            <li><a href="#">4RStudent</a></li>
+                            <li><a href="#">Mobile Digital Signing</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 hidden-xs">
+                    VASSIT brings people, capital and ideas together to help our clients and the communities we serve.
+                    Learn more about our firm.
+                </div>
+
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div data-screen="content">
+    <div class="banner" style="background-image: url('img/17.jpg')">
+        <div class="container" style="height: 100%">
+            <div class="banner-text">
+                <h1>Should you migrate from Site Studio to WebCenter Sites?</h1>
+                <span class="banner-button">Download Whitepaper &nbsp; <i class="fa fa-angle-right"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="html-content">
+
+                    <p>
+                        <strong>While Oracle has made it clear that WebCenter Sites (WCS) is the product that will, in time, become its core solution for web experience management, it hasn't yet put an end to WebCenter Content - Site Studio (SS).</strong></p>
+
+
+                    <p>Based on their different feature sets and price points, both solutions may appeal to different users in different situations.</p>
+
+                    <p>So, if you are deploying a new website, should you use WCS or SS? And if you are on SS already, should you be rushing to migrate to WCS? Is the fact that Oracle's statement of direction for WCS leaves us in no doubt that this is their strategic product going forward enough to make it strategic for you?</p>
+
+                    <div class="html-img">
+                        <img src="http://devble.com/wp-content/uploads/2014/05/EXTERNAL-CONTENT-INTEGRATION.png" alt=""/>
+                    </div>
+
+                    <h2>UNIQUE BENEFITS OF WEBCENTER SITES</h2>
+
+                    <p>WCS is one of a new breed of web experience management (WEM) platforms that go beyond the role of traditional web content management solutions. WEM platforms like WCS introduce functionality that is specifically aimed at help your business understand its audience, analyse their behaviour and personalise their web experience. This is all done with the aim of elevating the customer experience and monetising your web presence more efficiently.</p>
+
+                    <p>In order to achieve these goals, WCS ships with powerful new feature including:</p>
+
+                    <div class="html-img">
+                        <img src="https://teaminformatics.files.wordpress.com/2013/08/ci.png" alt=""/>
+                    </div>
+
+                    <ul>
+                        <li>Easy-to-use content authoring and design tools</li>
+                        <li>Sophisticated audience segmentation, analytics and content personalisation tools</li>
+                        <li>Centralised business-user management of both mobile and traditional websites</li>
+                        <li>Automated optimisation and delivery of website to thousands of mobile device types, without the need for responsive coding</li>
+                        <li>Integration with social media for seamless social login and sharing</li>
+                        <li>User-generated content features including comments (fully moderated), ratings, reviews and blogs</li>
+                        <li>Customisable gadgets for personalisation of the web experience</li>
+                        <li>Highly-scalable web content management platform for delivery of a rich, global web presence</li>
+                        <li>Ability to integrate with Oracle's CRM and e-commerce applications, enabling an integrated, multichannel customer experience</li>
+                        <li>By automating previously labour intensive operations such as audience segmentation, big data analytics, content personalisation and mobile presentation, WCS frees-up CIOs, CMOs, CTOs, webmaster and contributors to channel their efforts into more valuable areas of the customer experience.</li>
+                    </ul>
+
+                    <h2>STRENGTHS OF WEBCENTER CONTENT - SITE STUDIO</h2>
+
+                    <p>Webcenter Content - Site Studio (SS) however is not dead. In fact, at the time of writing, it is still being shipped with WebCenter Content. Further to this, the sun setting of the product has not been officially announced. While development of the product has ceased, most rumours put the end of life (i.e. end of support) at 2019.</p>
+
+                    <p>While SS may not have the web experience management functionality of WCS, it's still a very strong web content management (WCM) platform, employed and enjoyed by many. More than this however, SS also has a reputation for having a strong set of enterprise content management features and integrations - features which cannot be directly matched by WCS. In particular the Digital Asset Management (DAM), content conversion and information management features of SS are not directly replicated in WCS.</p>
+
+                    <p>Thus, if your requirement lies in the traditional website arena or is more aligned to enterprise content management that it is to customer experience management, you could still get a good few years' service out of SS without any significant new investment.</p>
+
+                    <h2>MANAGING THE CUSTOMER EXPERIENCE</h2>
+
+                    <p>If your requirement is however in the multi-channel customer experience arena, WCS surely has some attractive features that you should not ignore. The ability to understand, optimise and personalise each user's experience if powerful indeed and aligns well with CIO and CMO customer experience and customer journey objectives.</p>
+
+                    <p>With WCS you can implement your customer journey vision quickly and with minimum redevelopment, enabling you to drive engagement and conversion rates, revenue and profitability.</p>
+
+                    <h2>MIGRATING FROM SITE STUDIO TO WEBCENTER SITES</h2>
+
+                    <p>If you are currently operating on SS but want to take advantage of WCS' powerful experience management tool set, you are going to need to migrate some or all of your assets to the new platform. Careful planning of such a migration is essential to ensure its effective execution within budget and timescales. For guidelines and a methodology for migration from SS to WCS, all based on our real world experience, download our migration whitepaper.</p>
+
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="html-content">
+                    <h3>Recent Posts</h3>
+                    <hr/>
+
+                    <p><strong><a href="#">Should you migrate from Site Studio to WebCenter Sites?</a></strong></p>
+
+                    <p>
+                        <strong><a href="#">Why your knowledge management strategy must include an expert directory</a></strong>
+                    </p>
+
+                    <p><strong><a href="#">OVD: The CIO's solution to multiple IAM challenges</a></strong></p>
+
+                    <p><strong><a href="#">VASSIT attends Oracle European Bootcamp in Barcelona</a></strong></p>
+
+                    <p><strong><a href="#">Migration from Site Studio to WebCenter Sites (Fatwire)</a></strong></p>
+
+                </div>
+
+
+                <div class="html-content html-form">
+                    <h3>Download the Whitepaper</h3>
+                    <hr/>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><strong>Name</strong></p>
+
+                            <p><input class="input" type="text"/></p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p><strong>Email</strong></p>
+
+                            <p><input class="input" type="text"/></p>
+                        </div>
+                    </div>
+
+
+                    <p><strong>Company</strong></p>
+
+                    <p><input class="input" type="text"/></p>
+
+                    <p><strong>How Many People at Your Company?</strong></p>
+
+                    <p>
+                        <select class="input">
+                            <option value="">-Please Select-</option>
+                        </select>
+                    </p>
+
+                    <p><strong>What's Your Role in the Organisation? *</strong></p>
+
+                    <p>
+                        <select class="input">
+                            <option value="">-Please Select-</option>
+                        </select>
+                    </p>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><strong>Industry *</strong></p>
+
+                            <p>
+                                <select class="input">
+                                    <option value="">-Please Select-</option>
+                                </select>
+                            </p>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <p><strong>Country *</strong></p>
+
+                            <p>
+                                <select class="input">
+                                    <option value="">-Please Select-</option>
+                                </select>
+                            </p>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                    <a class="vass-btn alt" href="#"><strong>Submit &nbsp;
+                        <i class="fa fa-angle-right"></i></strong></a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="col-sm-4">
+                <h3>Get In Touch</h3>
+                <hr/>
+
+                <p><strong>Name</strong></p>
+                <p><input class="input" type="text"/></p>
+
+                <p><strong>Email</strong></p>
+                <p><input class="input" type="text"/></p>
+
+                <p><strong>Message</strong></p>
+                <p><input class="input" type="text"/></p>
+                <br/>
+                <p><a class="vass-btn white" href="#"><strong>Submit &nbsp; <i class="fa fa-angle-right"></i></strong></a></p>
+            </div>
+            <div class="col-sm-4">
+                <h3>Contact</h3>
+                <hr/>
+
+                <p><strong>Email</strong></p>
+                <p><a href="#">info@vassit.co.uk</a></p>
+
+                <p><strong>Address</strong></p>
+                <p>
+                    VASSIT UK SERVICES LTD. <br/>
+                    3RD FLOOR, <br/>
+                    111 BUCKINGHAM PALACE ROAD, <br/>
+                    LONDON, <br/>
+                    SW1W 0SR
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <h3>VASSIT on Twitter <div class="i fa fa-twitter pull-right"></div></h3>
+                <hr/>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="container">
+
+        <div class="pull-right">
+            <a href="/privacy-policy">Privacy Policy</a>
+            &nbsp;
+            <a href="/terms-of-use">Terms of Use</a>
+        </div>
+
+        <div class="pull-left">
+            © 2015 VASSIT UK Ltd. All rights reserved.
+        </div>
+
+        <a href="https://www.twitter.com/vassit"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/vassit"><i class="fa fa-linkedin"></i></a>
+    </div>
+</footer>
+
+<script src="bower.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
