@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>VASSIT</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <link rel="stylesheet" href="bower.css"/>
     <link rel="stylesheet" href="app.css"/>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
@@ -15,35 +18,52 @@
 </head>
 <body ng-app="vassit-web">
 <div ng-controller="HeaderController">
-    <header id="header-transparent">
-        <div class="container">
-            <div class="logo">
-                <img src="img/vassit-logo-white.png" alt="VASSIT Logo"/>
-            </div>
+    <!--<header id="header-transparent">-->
+        <!--<div class="container">-->
+            <!--<div class="logo">-->
+                <!--<img src="img/vassit-logo-white.png" alt="VASSIT Logo"/>-->
+            <!--</div>-->
 
-            <div class="social">
-                <i class="fa fa-fw fa-linkedin"></i>
-                <i class="fa fa-fw fa-twitter"></i>
+            <!--<div class="social">-->
+                <!--<i class="fa fa-fw fa-linkedin"></i>-->
+                <!--<i class="fa fa-fw fa-twitter"></i>-->
 
-            </div>
-            <div class="icons">
-                <i class="fa fa-fw fa-bars show-menu"></i>
-            </div>
-        </div>
-    </header>
+            <!--</div>-->
+            <!--<div class="icons">-->
+                <!--<i class="fa fa-fw fa-bars show-menu"></i>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</header>-->
+    <!--<header id="header">-->
+        <!--<div class="container">-->
+            <!--<div class="logo">-->
+                <!--<img src="img/vassit-logo.png" alt="VASSIT Logo"/>-->
+            <!--</div>-->
+
+            <!--<div class="social">-->
+                <!--<i class="fa fa-fw fa-linkedin"></i>-->
+                <!--<i class="fa fa-fw fa-twitter"></i>-->
+
+            <!--</div>-->
+            <!--<div class="icons">-->
+                <!--<i class="fa fa-fw fa-bars show-menu"></i>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</header>-->
     <header id="header">
         <div class="container">
             <div class="logo">
                 <img src="img/vassit-logo.png" alt="VASSIT Logo"/>
             </div>
 
-            <div class="social">
-                <i class="fa fa-fw fa-linkedin"></i>
-                <i class="fa fa-fw fa-twitter"></i>
-
-            </div>
-            <div class="icons">
-                <i class="fa fa-fw fa-bars show-menu"></i>
+            <div class="top-level">
+                <ul>
+                    <li data-has-menu="services"><a>Services</a></li>
+                    <li data-has-menu="solutions"><a>Solutions</a></li>
+                    <li><a href="#">Clients</a></li>
+                    <li data-has-menu="about-us"><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
             </div>
         </div>
     </header>

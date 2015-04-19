@@ -1,8 +1,12 @@
 var app = angular.module('vassit-web');
 
 app.controller('MenuController', ['$scope', function ($scope) {
+    var currentMenu = "";
+    var currentSub = "";
+
     var showMenu = function () {
-        $('#menu').velocity('transition.slideDownIn', 300);
+        if (currentMenu != "") return;
+        $('#menu, .menu-background').velocity('transition.slideDownIn', 300);
         $('#menu .primary li').velocity('stop').hide().velocity('transition.slideRightIn', {
             duration: 300,
             stagger: 100
@@ -10,35 +14,48 @@ app.controller('MenuController', ['$scope', function ($scope) {
     };
 
     var hideMenu = function () {
-        $('#menu').velocity('transition.slideUpOut', 300);
-        $('[data-sub]').hide();
-        //$('#menu .primary li').velocity('stop').hide().velocity('transition.slideRightIn', {duration:300,stagger:100});
+        currentMenu = "";
+        $('#menu, .menu-background').velocity('transition.slideUpOut', 300);
+        $('[data-menu]').hide();
+        $('[data-has-menu]').removeClass('active');
     };
 
-    var showSub = function (name) {
-        $('[data-sub]').hide();
-        $('[data-sub="' + name + '"]').show();
-        $('[data-sub="' + name + '"] li').velocity('stop').hide().velocity('transition.slideRightIn', {
+    var showMenuItems = function () {
+        $('[data-menu]').hide();
+        $('[data-menu="' + currentMenu + '"]').show();
+        $('[data-menu="' + currentMenu + '"] li').velocity('stop').hide().velocity('transition.slideRightIn', {
             duration: 300,
             stagger: 100
         });
     };
 
-    $('.promo, .promo-large').velocity('stop').hide().velocity('transition.slideLeftIn', {
-        duration: 1000,
-        stagger: 300
-    });
+    var showSub = function () {
+        $('[data-sub]').hide();
+        $('[data-sub="' + currentSub + '"]').show();
+        $('[data-sub="' + currentSub + '"] li').velocity('stop').hide().velocity('transition.slideRightIn', {
+            duration: 300,
+            stagger: 100
+        });
+    };
 
-    var hideSub = function (name) {
+    var hideSubs = function () {
+        $('[data-sub]').hide();
     };
 
     $(document).on('mouseover', '[data-has-sub]', function () {
-        var name = $(this).attr('data-has-sub');
-        showSub(name);
-
+        currentSub = $(this).attr('data-has-sub');
+        showSub();
         $('[data-has-sub]').removeClass('active');
         $(this).addClass('active');
+    });
 
+    $(document).on('click', '[data-has-menu]', function () {
+        showMenu();
+        currentMenu = $(this).attr('data-has-menu');
+        hideSubs();
+        showMenuItems();
+        $('[data-has-menu]').removeClass('active');
+        $(this).addClass('active');
     });
 
     $(document).on('click', '.show-menu', function () {
@@ -49,8 +66,28 @@ app.controller('MenuController', ['$scope', function ($scope) {
         hideMenu();
     });
 
+    var initialAnimations = function () {
+        $('.promo, .promo-large').velocity('stop').hide().velocity('transition.slideLeftIn', {
+            duration: 1000,
+            stagger: 300,
+            display: "block"
+        });
+
+        $('#header').velocity('stop').hide().velocity('transition.slideDownBigIn', {
+            duration: 1000,
+            display: "block"
+        });
+
+        $('#header li').velocity('stop').hide().velocity('transition.slideDownIn', {
+            duration: 1000,
+            stagger: 300,
+            display: "inline-block"
+        });
+    };
+
+    initialAnimations();
+
     $scope.showMenu = showMenu;
     $scope.hideMenu = hideMenu;
     $scope.showSub = showSub;
-    $scope.hideSub = hideSub;
 }]);

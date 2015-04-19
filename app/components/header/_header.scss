@@ -8,7 +8,7 @@
   left: 0;
   right: 0;
   z-index: 100;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  border-top:3px solid $secondary;
   display: none;
 
   .logo {
@@ -17,6 +17,58 @@
     img {
       height: 30px;
       margin: 20px 0;
+
+
+    }
+    @media(max-width: 750px) {
+      width: 100%;
+      left: 0;
+
+      img {
+        margin: 15px auto;
+        display: block;
+      }
+
+    }
+  }
+
+  .top-level {
+
+    font-size: 15px;
+    line-height: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: absolute;
+    left: 150px;
+    top: 18px;
+
+    ul, li {
+      padding: 0;
+      margin: 0;
+      border: none;
+      list-style: none;
+    }
+
+    ul {
+      li {
+        display: block;
+        float: left;
+        cursor: pointer;
+
+        a {
+          display: inline-block;
+          padding: 0 20px;
+        }
+
+        &.active {
+          a {
+            background: $lightGrey;
+            background: $primary;
+            color: white;
+            padding-bottom: 17px;
+          }
+        }
+      }
     }
   }
 
@@ -64,11 +116,34 @@
       }
     }
   }
+
+  @media(max-width: 750px) {
+    height: 100px;
+
+    .top-level {
+      font-size: 13px;
+      left: 0;
+      top: 60px;
+      text-align: center;
+      right: 0;
+      left: 0;
+
+      ul > li {
+        display: inline-block;
+        float: none;
+        a {
+          padding: 0 7px;
+        }
+      }
+    }
+
+  }
 }
 
 #header-transparent {
   @extend #header;
   display: block;
+  display: none;
 
   background: none;
   color: white;

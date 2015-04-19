@@ -11,11 +11,21 @@ var gulp = require('gulp'),
 
 // GENERATE HTML
 gulp.task('gen-html', function () {
-    return gulp.src(['app/header.html', 'app/components/menu/menu.html', 'app/components/home/home.html', 'app/footer.html'])
-        .pipe(using())
-        .pipe(concat('home.html'))
-        .pipe(gulp.dest('release'))
-        //.pipe(notify({message: 'Generated App HTML'}));
+
+    var pages = [
+        ['home','home'],
+        ['content','content'],
+        ['content','content-2'],
+        ['content','content-3'],
+        ['showcase','showcase']
+    ];
+
+    for (var i in pages) {
+        gulp.src(['app/header.html', 'app/components/menu/menu.html', 'app/components/' + pages[i][0] + '/' + pages[i][1] + '.html', 'app/footer.html'])
+            .pipe(using())
+            .pipe(concat(pages[i][1] + '.html'))
+            .pipe(gulp.dest('release'));
+    }
 });
 
 gulp.task('gen-css', function () {
@@ -24,14 +34,14 @@ gulp.task('gen-css', function () {
         .pipe(sass()).pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(minifycss())
         .pipe(gulp.dest('release'))
-        //.pipe(notify({message: 'Generated App CSS'}));
+    //.pipe(notify({message: 'Generated App CSS'}));
 });
 
 gulp.task('gen-bower-css', function () {
     return gulp.src('app/bower-components/bootstrap/dist/css/bootstrap.min.css')
         .pipe(concat('bower.css'))
         .pipe(gulp.dest('release/'))
-        //.pipe(notify({message: 'Generated Bower CSS'}));
+    //.pipe(notify({message: 'Generated Bower CSS'}));
 });
 
 // Scripts
@@ -47,7 +57,7 @@ gulp.task('gen-bower-js', function () {
     ])
         .pipe(concat('bower.js'))
         .pipe(gulp.dest('release/'))
-        //.pipe(notify({message: 'Generated Bower JS'}));
+    //.pipe(notify({message: 'Generated Bower JS'}));
 });
 
 // Scripts
@@ -55,7 +65,7 @@ gulp.task('gen-js', function () {
     return gulp.src(['app/app.js', 'app/components/**/*.js'])
         .pipe(concat('app.js'))
         .pipe(gulp.dest('release/'));
-        //.pipe(notify({message: 'Scripts task complete'}));
+    //.pipe(notify({message: 'Scripts task complete'}));
 });
 
 // Images
@@ -63,7 +73,7 @@ gulp.task('gen-img', function () {
     return gulp.src('app/img/**/*.*')
         //.pipe(cache(imagemin({optimizationLevel: 3, progressive: true, interlaced: true})))
         .pipe(gulp.dest('release/img'))
-        //.pipe(notify({message: 'Images task complete'}));
+    //.pipe(notify({message: 'Images task complete'}));
 });
 
 // Clean

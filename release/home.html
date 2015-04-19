@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>VASSIT</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <link rel="stylesheet" href="bower.css"/>
     <link rel="stylesheet" href="app.css"/>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
@@ -15,116 +18,164 @@
 </head>
 <body ng-app="vassit-web">
 <div ng-controller="HeaderController">
-    <header id="header-transparent">
-        <div class="container">
-            <div class="logo">
-                <img src="img/vassit-logo-white.png" alt="VASSIT Logo"/>
-            </div>
+    <!--<header id="header-transparent">-->
+        <!--<div class="container">-->
+            <!--<div class="logo">-->
+                <!--<img src="img/vassit-logo-white.png" alt="VASSIT Logo"/>-->
+            <!--</div>-->
 
-            <div class="social">
-                <i class="fa fa-fw fa-linkedin"></i>
-                <i class="fa fa-fw fa-twitter"></i>
+            <!--<div class="social">-->
+                <!--<i class="fa fa-fw fa-linkedin"></i>-->
+                <!--<i class="fa fa-fw fa-twitter"></i>-->
 
-            </div>
-            <div class="icons">
-                <i class="fa fa-fw fa-bars show-menu"></i>
-            </div>
-        </div>
-    </header>
+            <!--</div>-->
+            <!--<div class="icons">-->
+                <!--<i class="fa fa-fw fa-bars show-menu"></i>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</header>-->
+    <!--<header id="header">-->
+        <!--<div class="container">-->
+            <!--<div class="logo">-->
+                <!--<img src="img/vassit-logo.png" alt="VASSIT Logo"/>-->
+            <!--</div>-->
+
+            <!--<div class="social">-->
+                <!--<i class="fa fa-fw fa-linkedin"></i>-->
+                <!--<i class="fa fa-fw fa-twitter"></i>-->
+
+            <!--</div>-->
+            <!--<div class="icons">-->
+                <!--<i class="fa fa-fw fa-bars show-menu"></i>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</header>-->
     <header id="header">
         <div class="container">
             <div class="logo">
                 <img src="img/vassit-logo.png" alt="VASSIT Logo"/>
             </div>
 
-            <div class="social">
-                <i class="fa fa-fw fa-linkedin"></i>
-                <i class="fa fa-fw fa-twitter"></i>
-
-            </div>
-            <div class="icons">
-                <i class="fa fa-fw fa-bars show-menu"></i>
+            <div class="top-level">
+                <ul>
+                    <li data-has-menu="services"><a>Services</a></li>
+                    <li data-has-menu="solutions"><a>Solutions</a></li>
+                    <li><a href="#">Clients</a></li>
+                    <li data-has-menu="about-us"><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
             </div>
         </div>
     </header>
 
 </div>
 <div data-screen="menu" ng-controller="MenuController">
+    <div class="menu-background hide-menu">
+
+    </div>
     <nav id="menu">
         <div class="container">
 
-            <div class="logo">
-                <img src="img/vassit-logo-white.png" alt="VASSIT Logo"/>
-            </div>
-            <div class="icons">
-                <i class="fa fa-fw fa-times hide-menu"></i>
-            </div>
+            <!--<div class="logo">-->
+            <!--<img src="img/vassit-logo.png" alt="VASSIT Logo"/>-->
+            <!--</div>-->
+            <!--<div class="icons">-->
+            <!--<i class="fa fa-fw fa-times hide-menu"></i>-->
+            <!--</div>-->
 
             <!--<h1 style="">Menu</h1>-->
             <!--<hr/>-->
-            <div class="col-sm-4 col-xs-6">
-                <div class="row">
-                    <ul class="primary">
-                        <li data-has-sub="vass-group"><a href="#">VASS Group <i class="fa fa-chevron-right pull-right"></i></a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li data-has-sub="solutions"><a href="#">Solutions <i class="fa fa-chevron-right pull-right"></i></a></li>
-                        <li><a href="#">Knowledge Base</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Get In Touch</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-4 col-xs-6">
-                <div class="row">
-                    <ul data-sub="vass-group">
-                        <li><a href="#">GRUPO VASS</a></li>
-                        <li><a href="#">VASSIT US</a></li>
-                        <li><a href="#">VASS Colombia</a></li>
-                        <li><a href="#">VASS Brasil</a></li>
-                        <li><a href="#">VASS Mexico</a></li>
-                    </ul>
+            <!--<div class="col-sm-4 col-xs-6">-->
+            <!--<div class="row">-->
+            <!--<ul class="primary">-->
+            <!--<li data-has-sub="services"><a href="#">Services <i class="fa fa-chevron-right pull-right"></i></a></li>-->
+            <!--<li data-has-sub="solutions"><a href="#">Solutions <i class="fa fa-chevron-right pull-right"></i></a></li>-->
+            <!--<li><a href="#">Clients</a></li>-->
+            <!--<li><a href="#">About Us</a></li>-->
+            <!--<li><a href="#">Blog</a></li>-->
+            <!--<li><a href="#">Get In Touch</a></li>-->
+            <!--</ul>-->
+            <!--</div>-->
+            <!--</div>-->
+            <div class="row">
 
-                    <ul data-sub="solutions">
-                        <li><a href="#">Social E-Commerce</a></li>
-                        <li><a href="#">Invenio</a></li>
-                        <li><a href="#">Smartex</a></li>
-                    </ul>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="row">
+                        <ul data-menu="services">
+                            <li><a href="/services.html">All Services</a></li>
+                            <li><a href="#">Application development</a></li>
+                            <li><a href="#">Digital</a></li>
+                            <li><a href="#">Consulting</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+
+                        <ul data-menu="solutions">
+                            <li data-has-sub="customer-experience"><a href="#">Customer Experience <i
+                                    class="fa fa-angle-right pull-right"></i></a></li>
+                            <li data-has-sub="big-data"><a href="#">Big Data <i
+                                    class="fa fa-angle-right pull-right"></i></a></li>
+                            <li data-has-sub="industry-solutions"><a href="#">Industry Solutions <i
+                                    class="fa fa-angle-right pull-right"></i></a></li>
+                        </ul>
+
+                        <ul data-menu="about-us">
+                            <li><a href="#">Partnership</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">People</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="row">
+                        <ul data-sub="customer-experience">
+                            <li><a href="#">People Finder</a></li>
+                            <li><a href="#">ECM</a></li>
+                            <li><a href="#">Automated Marketing</a></li>
+                        </ul>
+                        <ul data-sub="big-data">
+                            <li><a href="#">Smartex</a></li>
+                            <li><a href="#">IoT</a></li>
+                        </ul>
+                        <ul data-sub="industry-solutions">
+                            <li><a href="#">4RStudent</a></li>
+                            <li><a href="#">Mobile Digital Signing</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 hidden-xs">
+                    VASSIT brings people, capital and ideas together to help our clients and the communities we serve.
+                    Learn more about our firm.
                 </div>
 
-            </div>
-            <div class="col-sm-4 hidden-xs">
-                VASSIT brings people, capital and ideas together to help our clients and the communities we serve. Learn more about our firm.
             </div>
         </div>
     </nav>
 </div>
 
-<div data-screen="home">
-    <!--<div class="container">-->
-        <!--<div class="row">-->
-            <div class="banner"
-                 style="background-image: url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/282PFH48UW.jpg')">
-                <div class="container" style="height: 100%">
-                    <div class="banner-text">
-                        <h1>The Value of Making Things Simple</h1>
+<div data-screen="home" class="page-height">
+    <div class="banner" style="background-image: url('http://www.vass.es/sites/default/files/vass/slide/img_5112.jpg')">
+        <div class="container" style="height: 100%">
+            <div class="row">
+                <div class="banner-text">
+                    <h1>The Value of Making Things Simple</h1>
 
-                        <p>
-                            Get an overview of our company. Meet our leaders. Learn about our people, culture and our commitment to
-                            diversity. Learn about our Business Standards.
-                        </p>
-                    </div>
+                    <p class="hidden-xs">
+                        Get an overview of our company. Meet our leaders. Learn about our people, culture and our commitment to
+                        diversity.
+                    </p>
 
+                    <span class="banner-button">Explore Our Clients &nbsp; <i class="fa fa-angle-right"></i></span>
+                    <span class="banner-button alt">Learn About VASSIT &nbsp; <i class="fa fa-angle-right"></i></span>
                 </div>
-                <div class="overlay">
-
-                </div>
-
             </div>
 
-        <!--</div>-->
 
-    <!--</div>-->
+        </div>
+
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
@@ -283,8 +334,7 @@
                     <div class="promo">
 
                         <div class="promo-image-container">
-                            <div class="promo-image"
-                                 style="background-image: url('https://unsplash.it/500/300/?random&5')"></div>
+                            <div class="promo-image" style="background-image: url('https://unsplash.it/500/300/?random&5')"></div>
                         </div>
                         <div class="promo-content">
                             <h3>Other Content</h3>
@@ -303,7 +353,52 @@
     </div>
 
 </div>
+
+
 <footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="col-sm-4">
+                <h3>Get In Touch</h3>
+                <hr/>
+
+                <p><strong>Name</strong></p>
+                <p><input class="input" type="text"/></p>
+
+                <p><strong>Email</strong></p>
+                <p><input class="input" type="text"/></p>
+
+                <p><strong>Message</strong></p>
+                <p><input class="input" type="text"/></p>
+                <br/>
+                <p><a class="vass-btn white" href="#"><strong>Submit &nbsp; <i class="fa fa-angle-right"></i></strong></a></p>
+            </div>
+            <div class="col-sm-4">
+                <h3>Contact</h3>
+                <hr/>
+
+                <p><strong>Email</strong></p>
+                <p><a href="#">info@vassit.co.uk</a></p>
+
+                <p><strong>Address</strong></p>
+                <p>
+                    VASSIT UK SERVICES LTD. <br/>
+                    3RD FLOOR, <br/>
+                    111 BUCKINGHAM PALACE ROAD, <br/>
+                    LONDON, <br/>
+                    SW1W 0SR
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <h3>VASSIT on Twitter <div class="i fa fa-twitter pull-right"></div></h3>
+                <hr/>
+            </div>
+
+        </div>
+
+
+    </div>
+
     <div class="container">
 
         <div class="pull-right">
@@ -316,8 +411,8 @@
             © 2015 VASSIT UK Ltd. All rights reserved.
         </div>
 
-        <a href="https://www.twitter.com/andigital"><i class="fa fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/company/andigital"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.twitter.com/vassit"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/vassit"><i class="fa fa-linkedin"></i></a>
     </div>
 </footer>
 
