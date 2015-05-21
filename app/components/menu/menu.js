@@ -50,6 +50,11 @@ app.controller('MenuController', ['$scope', function ($scope) {
     });
 
     $(document).on('click', '[data-has-menu]', function () {
+        if ($(this).hasClass('active')) {
+            hideMenu();
+            return;
+        }
+
         showMenu();
         currentMenu = $(this).attr('data-has-menu');
         hideSubs();

@@ -1,17 +1,8 @@
 var app = angular.module('vassit-web', []);
 var app = angular.module('vassit-web');
 
-app.controller('HeaderController', ['$scope', function ($scope) {
+app.controller('HeaderController', ['$scope', '$interval', function ($scope, $interval) {
     var header = 'transparent';
-
-    //$(window).scroll(function () {
-    //    var offset = $(window).scrollTop();
-    //    if (offset > 5) {
-    //        setHeader('normal');
-    //    } else {
-    //        setHeader('transparent');
-    //    }
-    //});
 
     var setHeader = function (flag) {
         if (flag == header) return;
@@ -27,7 +18,22 @@ app.controller('HeaderController', ['$scope', function ($scope) {
             $('#header').velocity('transition.fadeIn', 700);
             $('#header-transparent').velocity('transition.fadeOut', 700);
         }
-    }
+    };
+
+    var banners = $('.banner');
+    var currentBanner = 0;
+
+    $interval(function () {
+        var nextBanner = currentBanner + 1;
+        if (nextBanner >= banners.length) nextBanner = 0;
+
+        if (nextBanner == currentBanner) return;
+
+        $(banners[currentBanner]).velocity('transition.fadeOut', 2000);
+        $(banners[nextBanner]).velocity('transition.fadeIn', 2000);
+
+        currentBanner = nextBanner;
+    }, 7000);
 }]);
 
 var app = angular.module('vassit-web');
@@ -82,6 +88,11 @@ app.controller('MenuController', ['$scope', function ($scope) {
     });
 
     $(document).on('click', '[data-has-menu]', function () {
+        if ($(this).hasClass('active')) {
+            hideMenu();
+            return;
+        }
+
         showMenu();
         currentMenu = $(this).attr('data-has-menu');
         hideSubs();

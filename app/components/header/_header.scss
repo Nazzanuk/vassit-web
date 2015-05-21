@@ -11,6 +11,12 @@
   border-top:3px solid $secondary;
   display: none;
 
+  .vass-btn {
+    margin-top: 17px;
+  }
+
+
+
   .logo {
     position: absolute;
 
@@ -34,7 +40,7 @@
 
   .top-level {
 
-    font-size: 15px;
+    font-size: 18px;
     line-height: 35px;
     font-weight: 600;
     text-transform: uppercase;

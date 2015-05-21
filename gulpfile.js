@@ -89,11 +89,8 @@ gulp.task('default', ['clean'], function () {
 
 // Watch
 gulp.task('watch', ['default'], function () {
-
     // Watch .scss files
     gulp.watch('app/components/**/*.js', ['default']);
     gulp.watch('app/**/*.scss', ['default']);
     gulp.watch('app/**/*.html', ['default']);
-
-
 });
