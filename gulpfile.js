@@ -29,11 +29,17 @@ gulp.task('gen-html', function () {
 });
 
 gulp.task('gen-css', function () {
+    gulp.src(['app/app-new.scss'])
+        .pipe(using())
+        .pipe(sass()).pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+        //.pipe(minifycss())
+        .pipe(gulp.dest('release'));
+
     return gulp.src(['app/app.scss'])
         .pipe(using())
         .pipe(sass()).pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(minifycss())
-        .pipe(gulp.dest('release'))
+        .pipe(gulp.dest('release'));
     //.pipe(notify({message: 'Generated App CSS'}));
 });
 

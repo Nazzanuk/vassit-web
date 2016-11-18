@@ -1,0 +1,164 @@
+#header {
+  border-color: #eee;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.banners {
+  height: 300px;
+
+  .banner {
+    height: 300px;
+  }
+
+  .banner-text {
+    top: 100px;
+    bottom: auto;
+    bottom: initial;
+    border: none;
+
+    h1 {
+      margin: 0;
+    }
+  }
+}
+
+.promo-small {
+  .promo-image-container {
+    height: 100px;
+    .promo-image {
+      height: 100px;
+    }
+  }
+}
+
+.vass-title {
+  font-size: 25px;
+  margin: 0 0 20px;
+  //text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+
+.vass-subtitle {
+  font-size: 20px;
+  margin: 0 0 15px;
+  //text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+
+.vass-trusted-container {
+  background: #f7f7f7;
+  //background: #eee;
+  padding: 30px 0;
+  margin-bottom: 30px;
+}
+
+.vass-clients-container {
+  background: #fff;
+  padding: 60px 0;
+  //margin-bottom: 60px;
+  background: white;
+}
+
+.vass-services-container {
+  background: #333;
+  padding: 60px 0;
+  //margin-bottom: 60px;
+  color: white;
+  //background: white;
+}
+
+.vass-stats-container {
+  padding: 60px 0;
+  margin-bottom: 60px;
+  background: white;
+}
+
+*:last-child > .vass-stat {
+  border: none;
+}
+
+.vass-stat {
+  padding: 30px;
+  text-align: center;
+  border-right: 3px solid #ccc;
+  height: 200px;
+
+  .stat-number {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #0E417E;
+  }
+
+  p {
+    //color: #0E417E;
+    font-weight: bold;
+  }
+
+}
+
+.vass-clients {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: white;
+
+  .client {
+    flex: 1 0 250px;
+    //max-width: 400px;
+
+    height: 75px;
+    background: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 5px;
+    //padding: 10px;
+  }
+}
+.vass-trusteds {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: -15px -15px 15px;
+}
+.vass-trusted {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 250px;
+  margin: 15px;
+  background: #fff;
+  padding: 30px;
+  text-align: center;
+  align-items: center;
+
+  .trusted-logo {
+    margin: 0 0 15px;
+    width: 100%;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .trusted-title {
+    font-size: 20px;
+    margin: 0 0 20px;
+    font-weight: bold;
+  }
+
+  .trusted-figure {
+    font-size: 20px;
+    margin: 0 0 30px;
+    font-weight: bold;
+  }
+
+  p {
+    padding: 0 15px 10px;
+    flex: 1 0 auto;
+  }
+}
